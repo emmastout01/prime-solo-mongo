@@ -27,6 +27,8 @@ orders.update({orderDate: new Date('2017-04-04')}, {$push: {lineItems: {unitPric
 
 // 7. Change the first lineItem in the order from 1/2/2017 to be for 2 'transistor radio's
 
-orders.update({orderDate: new Date('2017-04-04')}, {$set: {lineItems: {unitPrice: 400.00, quantity: 2, productName: "transistor radio"}}})
+orders.update({orderDate: new Date('2017-04-04')}, {$set: {lineItems.1: {unitPrice: 400.00, quantity: 2, productName: "transistor radio"}}})
+//Didn't quite get this one! 
 
 // 8. Find orders with lineItems that have a quantity that is less than 10, but greater than 2. You will have to research $elemMatch
+
